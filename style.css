@@ -1,0 +1,15 @@
+.hero {
+    width: 350px;
+    height: 220px;
+
+    padding-top: 15px;
+    padding-right: 10px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+
+    margin: 30px;
+
+    border: 2px dotted red;
+
+    background-color: green;
+}
