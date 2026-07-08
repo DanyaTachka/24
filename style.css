@@ -97,7 +97,7 @@ nav a.current::after {
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
-    transition: .3s;
+    transition: 0.3s;
 }
 
 .hero button:hover {
@@ -106,6 +106,10 @@ nav a.current::after {
 
 .homework {
     padding: 80px 0;
+}
+
+.homework-text{
+    color: black;
 }
 
 .homework-box {
