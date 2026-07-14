@@ -108,45 +108,88 @@ nav a.current::after {
     padding: 80px 0;
 }
 
-.homework-text{
-    color: black;
+
+.homework-container {
+
+    width: 900px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 280px);
+    gap: 20px;
+
 }
+
+
 
 .homework-box {
     position: relative;
-    width: 370px;
-    margin: 0 auto;
+    width: 280px;
     overflow: hidden;
 }
 
+
+
 .homework-box img {
     display: block;
-    width: 100%;
+    width: 280px;
+    height: auto;
 }
+
+
+
+
 
 .overlay {
+
     position: absolute;
+
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
-    background: rgba(33, 150, 243, .9);
+
+
+    background: rgba(33,150,243,0.9);
+
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
-    padding: 25px;
+
+
+    padding: 15px;
+
+
     transform: translateY(100%);
-    transition: transform .3s ease;
+
+    transition: 0.3s;
+
 }
+
+
 
 .overlay p {
-    color: #fff;
-    font-size: 18px;
-    line-height: 1.6;
+
+    color: white;
+
+    font-size: 14px;
+
+    line-height: 1.4;
+
+    text-align: center;
+
 }
 
+
+
 .homework-box:hover .overlay {
+
     transform: translateY(0);
+
 }
 
 .features {
