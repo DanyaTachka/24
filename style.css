@@ -31,6 +31,8 @@ header {
     font-size: 26px;
     font-weight: 700;
     color: #2196f3;
+
+    animation: logoAnimation 1s ease;
 }
 
 nav {
@@ -87,6 +89,8 @@ nav a.current::after {
     width: 700px;
     margin: 0 auto 40px;
     line-height: 1.4;
+
+    animation: heroTitle 1.2s ease;
 }
 
 .hero button {
@@ -97,7 +101,9 @@ nav a.current::after {
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: .3s;
+
+    animation: heroButton 1.5s ease;
 }
 
 .hero button:hover {
@@ -108,19 +114,14 @@ nav a.current::after {
     padding: 80px 0;
 }
 
-
 .homework-container {
-
     width: 900px;
     margin: 0 auto;
 
     display: grid;
     grid-template-columns: repeat(3, 280px);
     gap: 20px;
-
 }
-
-
 
 .homework-box {
     position: relative;
@@ -128,20 +129,13 @@ nav a.current::after {
     overflow: hidden;
 }
 
-
-
 .homework-box img {
     display: block;
     width: 280px;
     height: auto;
 }
 
-
-
-
-
 .overlay {
-
     position: absolute;
 
     top: 0;
@@ -150,46 +144,27 @@ nav a.current::after {
     width: 100%;
     height: 100%;
 
-
-    background: rgba(33,150,243,0.9);
-
+    background: rgba(33, 150, 243, 0.9);
 
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
 
     padding: 15px;
 
-
     transform: translateY(100%);
-
-    transition: 0.3s;
-
+    transition: .3s;
 }
-
-
 
 .overlay p {
-
     color: white;
-
     font-size: 14px;
-
     line-height: 1.4;
-
     text-align: center;
-
 }
 
-
-
 .homework-box:hover .overlay {
-
     transform: translateY(0);
-
 }
 
 .features {
@@ -203,6 +178,7 @@ nav a.current::after {
 
 .feature {
     width: 270px;
+    animation: cardAppear 1s ease;
 }
 
 .feature h3 {
@@ -215,7 +191,6 @@ nav a.current::after {
     font-size: 14px;
     line-height: 1.7;
 }
-
 .work {
     padding-bottom: 94px;
 }
@@ -237,6 +212,11 @@ nav a.current::after {
     width: 370px;
     height: 294px;
     object-fit: cover;
+    transition: .4s;
+}
+
+.work-images img:hover {
+    transform: scale(1.05);
 }
 
 .team {
@@ -256,6 +236,13 @@ nav a.current::after {
     text-align: center;
     padding-bottom: 30px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, .1);
+
+    animation: cardAppear 1.2s ease;
+    transition: .3s;
+}
+
+.member:hover {
+    transform: translateY(-10px);
 }
 
 .member img {
@@ -288,4 +275,57 @@ footer p {
     color: #ffffff99;
     margin-bottom: 10px;
     font-size: 14px;
+}
+/* ===========================
+   KEYFRAMES
+=========================== */
+
+@keyframes heroTitle {
+    0% {
+        opacity: 0;
+        transform: translateY(-60px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes heroButton {
+    0% {
+        opacity: 0;
+        transform: scale(0.6);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes cardAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes logoAnimation {
+    0% {
+        transform: rotate(-10deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
 }
