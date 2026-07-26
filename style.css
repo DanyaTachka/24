@@ -34,6 +34,9 @@ header {
 
     animation: logoAnimation 1s ease;
 }
+.logo span {
+    color: #212121;
+}
 
 nav {
     display: flex;
@@ -46,8 +49,7 @@ nav a {
     color: #212121;
     font-size: 14px;
     font-weight: 500;
-    padding-bottom: 32px;
-    transition: .3s;
+    transition: color .3s;
 }
 
 nav a:hover {
@@ -62,7 +64,7 @@ nav a.current::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -32px;
     width: 100%;
     height: 4px;
     background: #2196f3;
@@ -74,6 +76,8 @@ nav a.current::after {
     font-size: 14px;
     line-height: 1.7;
     text-align: right;
+    display: flex;
+    gap: 20px;
 }
 
 .hero {
@@ -110,61 +114,149 @@ nav a.current::after {
     background: #188ce8;
 }
 
-.homework {
+.portfolio {
     padding: 80px 0;
 }
 
-.homework-container {
+
+.filters {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 40px;
+}
+
+
+.filters button {
+    padding: 10px 25px;
+    border: none;
+    background: #f5f4fa;
+    border-radius: 4px;
+
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.filters .active {
+    background: #2196f3;
+    color: white;
+}
+
+
+
+.portfolio-container {
+
     width: 900px;
     margin: 0 auto;
 
     display: grid;
-    grid-template-columns: repeat(3, 280px);
-    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+
 }
 
-.homework-box {
+
+
+.card {
+
     position: relative;
-    width: 280px;
     overflow: hidden;
+
+    border: 1px solid #eeeeee;
+    background: white;
+
 }
 
-.homework-box img {
+
+
+.card img {
+
+    width: 100%;
+    height: 260px;
+
+    object-fit: cover;
+
     display: block;
-    width: 280px;
-    height: auto;
+
 }
+
+
+
+.card-info {
+
+    padding: 20px;
+
+}
+
+
+
+.card-info h3 {
+
+    margin: 0 0 10px;
+
+    font-size: 18px;
+
+}
+
+
+
+.card-info p {
+
+    margin: 0;
+
+    color: #757575;
+
+}
+
+
 
 .overlay {
+
     position: absolute;
 
     top: 0;
     left: 0;
 
     width: 100%;
-    height: 100%;
+    height: 260px;
 
-    background: rgba(33, 150, 243, 0.9);
+    background: rgba(33,150,243,0.9);
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    padding: 15px;
+    padding: 20px;
 
-    transform: translateY(100%);
-    transition: .3s;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.3s;
+
 }
+
 
 .overlay p {
+
     color: white;
-    font-size: 14px;
-    line-height: 1.4;
-    text-align: center;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+
 }
 
-.homework-box:hover .overlay {
-    transform: translateY(0);
+
+
+
+.card:hover .overlay {
+
+    opacity: 1;
+
+    visibility: visible;
+
 }
 
 .features {
