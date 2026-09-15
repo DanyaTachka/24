@@ -421,3 +421,245 @@ footer p {
         transform: rotate(0deg);
     }
 }
+@media (max-width: 1199px) {
+    .container {
+        width: 90%;
+    }
+
+    .header {
+        padding: 20px 0;
+    }
+
+    .hero {
+        padding: 150px 20px;
+    }
+
+    .hero h1 {
+        max-width: 700px;
+        width: 100%;
+    }
+
+    .features-wrap {
+        flex-wrap: wrap;
+    }
+
+    .feature {
+        width: calc(50% - 15px);
+    }
+
+    .work-images {
+        flex-wrap: wrap;
+    }
+
+    .team-wrap {
+        flex-wrap: wrap;
+    }
+
+    .portfolio-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 767px) {
+    .header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        gap: 25px;
+    }
+
+    nav a.current::after {
+        bottom: -10px;
+    }
+
+    .contacts {
+        flex-direction: column;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .hero {
+        padding: 100px 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+        line-height: 1.2;
+        margin-bottom: 30px;
+    }
+
+    .features {
+        padding: 60px 0;
+    }
+
+    .feature {
+        width: 100%;
+    }
+
+    .work {
+        padding-bottom: 60px;
+    }
+
+    .work h2,
+    .team h2 {
+        font-size: 28px;
+        margin-bottom: 30px;
+    }
+
+    .work-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .work-images img {
+        width: 100%;
+        max-width: 370px;
+    }
+
+    .team {
+        padding: 60px 0;
+    }
+
+    .team-wrap {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .filters {
+        flex-wrap: wrap;
+        padding: 0 20px;
+    }
+
+    .portfolio {
+        padding: 50px 0;
+    }
+
+    .portfolio-container {
+        width: 90%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 479px) {
+    .container {
+        width: calc(100% - 30px);
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    nav {
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 80px 15px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .hero button {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .work-images img {
+        height: auto;
+    }
+
+    .member {
+        width: 100%;
+        max-width: 270px;
+    }
+
+    .member img {
+        width: 100%;
+    }
+
+    .portfolio-container {
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .filters {
+        padding: 0 10px;
+    }
+
+    .filters button {
+        padding: 9px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 320px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    .container {
+        width: calc(100% - 20px);
+    }
+
+    .header {
+        gap: 15px;
+    }
+
+    nav {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 60px 10px;
+    }
+
+    .hero h1 {
+        font-size: 22px;
+    }
+
+    .hero button {
+        font-size: 14px;
+        padding: 13px 20px;
+    }
+
+    .feature p {
+        font-size: 13px;
+    }
+
+    .work h2,
+    .team h2 {
+        font-size: 24px;
+    }
+
+    .filters {
+        gap: 5px;
+    }
+
+    .filters button {
+        padding: 8px 10px;
+        font-size: 12px;
+    }
+
+    .card img,
+    .overlay {
+        height: 200px;
+    }
+
+    .card-info {
+        padding: 15px;
+    }
+}
