@@ -43,6 +43,18 @@ header {
 .logo span {
     color: #212121;
 }
+.header-smile {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: block;
+}
+.header-smile {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    display: block;
+}
 
 .desktop-nav,
 .contacts {

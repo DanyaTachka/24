@@ -13,26 +13,45 @@
 
 <header>
     <div class="container header">
-
-        <div class="logo">
+       <div class="logo">
             Web<span>Studio</span>
         </div>
-
+        <svg class="header-smile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" aria-label="Смайлик" role="img">
+            <style>
+                .face {
+                    fill: #ffdf5d;
+                    stroke: #222;
+                    stroke-width: 5;
+                }
+                .eyes {
+                    fill: #222;
+                }
+                .mouth {
+                    fill: none;
+                    stroke: #222;
+                    stroke-width: 5;
+                    stroke-linecap: round;
+                }
+            </style>
+            <g>
+                <circle class="face" cx="200" cy="150" r="90"/>
+                <circle class="eyes" cx="170" cy="125" r="8"/>
+                <circle class="eyes" cx="230" cy="125" r="8"/>
+                <path class="mouth" d="M155 175 Q200 225 245 175"/>
+            </g>
+        </svg>
         <nav class="desktop-nav">
             <a href="index.html">Студія</a>
             <a href="portfolio.html" class="current">Портфоліо</a>
             <a href="#">Контакти</a>
         </nav>
-
         <div class="contacts">
             <a href="mailto:info@devstudio.com">info@devstudio.com</a>
             <a href="tel:+380961111111">+38 096 111 11 11</a>
         </div>
-
         <button class="menu-button" type="button" aria-label="Відкрити меню">
             ☰
         </button>
-
     </div>
 </header>
 
@@ -41,24 +60,18 @@
     <button class="menu-close" type="button" aria-label="Закрити меню">
         ×
     </button>
-
     <nav class="mobile-nav">
         <a href="index.html">Студія</a>
         <a href="portfolio.html" class="current">Портфоліо</a>
         <a href="#">Контакти</a>
     </nav>
-
     <div class="mobile-contacts">
         <a href="tel:+380961111111">+38 096 111 11 11</a>
         <a href="mailto:info@devstudio.com">info@devstudio.com</a>
     </div>
-
 </div>
-
 <section class="portfolio">
-
     <div class="container">
-
         <div class="filters">
             <button class="active">Усі</button>
             <button>Веб-сайти</button>
@@ -66,106 +79,83 @@
             <button>Дизайн</button>
             <button>Маркетинг</button>
         </div>
-
         <div class="portfolio-container">
 
             <div class="card">
                 <img src="./imgs/computer.png" alt="Технокряк">
-
                 <div class="card-info">
                     <h3>Технокряк</h3>
                     <p>Веб-сайт</p>
                 </div>
-
                 <div class="overlay">
                     <p>
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     </p>
                 </div>
             </div>
-
             <div class="card">
                 <img src="./imgs/backetbal.png" alt="Постер">
-
                 <div class="card-info">
                     <h3>Постер New Orlean vs Golden Star</h3>
                     <p>Дизайн</p>
                 </div>
-
                 <div class="overlay">
                     <p>
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     </p>
                 </div>
             </div>
-
             <div class="card">
                 <img src="./imgs/fisch.png" alt="Ресторан">
-
                 <div class="card-info">
                     <h3>Ресторан Seafood</h3>
                     <p>Додаток</p>
                 </div>
-
                 <div class="overlay">
                     <p>
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     </p>
                 </div>
             </div>
-
             <div class="card">
                 <img src="./imgs/headphones.png" alt="Проект Prime">
-
                 <div class="card-info">
                     <h3>Проект Prime</h3>
                     <p>Маркетинг</p>
                 </div>
-
                 <div class="overlay">
                     <p>
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     </p>
                 </div>
             </div>
-
             <div class="card">
                 <img src="./imgs/boxes.png" alt="Boxes">
-
                 <div class="card-info">
                     <h3>Проект Boxes</h3>
                     <p>Додаток</p>
                 </div>
-
                 <div class="overlay">
                     <p>
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     </p>
                 </div>
             </div>
-
             <div class="card">
                 <img src="./imgs/pc.png" alt="Inspiration">
-
                 <div class="card-info">
                     <h3>Inspiration has no Borders</h3>
                     <p>Веб-сайт</p>
                 </div>
-
                 <div class="overlay">
                     <p>
                         Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
                     </p>
                 </div>
             </div>
-
         </div>
-
     </div>
-
 </section>
-
 <script src="mobile-menu.js"></script>
-
 </body>
 </html>
