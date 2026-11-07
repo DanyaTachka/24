@@ -43,12 +43,14 @@ header {
 .logo span {
     color: #212121;
 }
+
 .header-smile {
     width: 40px;
     height: 40px;
     flex-shrink: 0;
     display: block;
 }
+
 .header-smile {
     width: 40px;
     height: 40px;
@@ -71,6 +73,7 @@ header {
     cursor: pointer;
 }
 
+/* Мобильное меню */
 .mobile-menu {
     position: fixed;
     inset: 0;
@@ -79,9 +82,7 @@ header {
     padding: 30px;
     transform: translateX(100%);
     visibility: hidden;
-    transition:
-        transform 0.45s ease,
-        visibility 0.45s ease;
+    transition: transform 0.45s ease, visibility 0.45s ease;
 }
 
 .mobile-menu.is-open {
@@ -117,10 +118,7 @@ header {
     font-weight: 700;
     transform: translateX(40px);
     opacity: 0;
-    transition:
-        transform 0.4s ease,
-        opacity 0.4s ease,
-        color 0.3s ease;
+    transition: transform 0.4s ease, opacity 0.4s ease, color 0.3s ease;
 }
 
 .mobile-menu.is-open .mobile-nav a {
@@ -194,10 +192,7 @@ header {
     font-size: 16px;
     cursor: pointer;
     box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
-    transition:
-        background 0.3s,
-        box-shadow 0.3s,
-        transform 0.3s;
+    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
     animation: heroButton 1.5s ease;
 }
 
@@ -258,9 +253,7 @@ header {
     object-fit: cover;
     border-radius: 4px;
     box-shadow: 0 5px 16px rgba(0, 0, 0, 0.12);
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .work-images img:hover {
@@ -290,9 +283,7 @@ header {
     border-radius: 4px;
     box-shadow: 0 5px 18px rgba(33, 50, 80, 0.12);
     animation: cardAppear 1.2s ease;
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     overflow: hidden;
 }
 
@@ -365,10 +356,7 @@ footer p {
     font-size: 14px;
     cursor: pointer;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
-    transition:
-        background 0.3s,
-        color 0.3s,
-        box-shadow 0.3s;
+    transition: background 0.3s, color 0.3s, box-shadow 0.3s;
 }
 
 .filters button:hover {
@@ -395,9 +383,7 @@ footer p {
     border-radius: 4px;
     background: #fff;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
-    transition:
-        box-shadow 0.3s,
-        transform 0.3s;
+    transition: box-shadow 0.3s, transform 0.3s;
 }
 
 .card:hover {
@@ -449,9 +435,7 @@ footer p {
     );
     opacity: 0;
     visibility: hidden;
-    transition:
-        opacity 0.3s,
-        visibility 0.3s;
+    transition: opacity 0.3s, visibility 0.3s;
 }
 
 .overlay p {
@@ -707,4 +691,9 @@ footer p {
     100% {
         transform: rotate(0deg);
     }
+}
+
+/* Блокировка прокрутки страницы при открытом меню */
+body.menu-open {
+    overflow: hidden;
 }

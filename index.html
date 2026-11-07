@@ -203,65 +203,70 @@
 </footer>
 
 <script src="mobile-menu.js">
-        const burger = document.getElementById("burger");
-        const nav = document.querySelector("nav");
-        const header = document.querySelector("header");
+       
+const menuButton = document.querySelector(".menu-button");
+const menuClose = document.querySelector(".menu-close");
+const mobileMenu = document.querySelector(".mobile-menu");
+const mobileLinks = document.querySelectorAll(".mobile-nav a");
 
-        const modal = document.getElementById("modal");
-        const openBtns = document.querySelectorAll("#openModal");
-        const closeBtn = document.querySelector(".close-btn");
+function openMenu() {
+    mobileMenu.classList.add("is-open");
 
-        if (burger && nav) {
-            burger.addEventListener("click", () => {
-                burger.classList.toggle("active");
-                nav.classList.toggle("active");
-            });
+    menuButton.classList.add("is-active");
+    menuButton.setAttribute("aria-expanded", "true");
 
-            document.querySelectorAll("nav a").forEach(link => {
-                link.addEventListener("click", () => {
-                    burger.classList.remove("active");
-                    nav.classList.remove("active");
-                });
-            });
-        }
+    mobileMenu.setAttribute("aria-hidden", "false");
 
-        function updateHeader() {
-            if (header) {
-                header.classList.toggle("scrolled", window.scrollY > 30);
-            }
-        }
+    document.body.classList.add("menu-open");
+}
 
-        window.addEventListener("scroll", updateHeader, {
-            passive: true
-        });
+function closeMenu() {
+    mobileMenu.classList.remove("is-open");
 
-        updateHeader();
+    menuButton.classList.remove("is-active");
+    menuButton.setAttribute("aria-expanded", "false");
 
-        if (modal) {
-            openBtns.forEach(btn => {
-                btn.addEventListener("click", () => {
-                    modal.classList.add("active");
-                });
-            });
+    mobileMenu.setAttribute("aria-hidden", "true");
 
-            if (closeBtn) {
-                closeBtn.addEventListener("click", () => {
-                    modal.classList.remove("active");
-                });
-            }
+    document.body.classList.remove("menu-open");
+}
 
-            modal.addEventListener("click", event => {
-                if (event.target === modal) {
-                    modal.classList.remove("active");
-                }
-            });
+// Открытие бургер-меню
+menuButton.addEventListener("click", openMenu);
 
-            document.addEventListener("keydown", event => {
-                if (event.key === "Escape") {
-                    modal.classList.remove("active");
-                }
-            });
-        }
+// Закрытие по крестику
+menuClose.addEventListener("click", closeMenu);
+
+// Закрытие при переходе по ссылке
+mobileLinks.forEach(link => {
+    link.addEventListener("click", closeMenu);
+});
+
+// Закрытие по Escape
+document.addEventListener("keydown", event => {
+    if (event.key === "Escape") {
+        closeMenu();
+    }
+});
+
+// Закрытие при клике вне меню
+document.addEventListener("click", event => {
+    if (
+        mobileMenu.classList.contains("is-open") &&
+        !mobileMenu.contains(event.target) &&
+        !menuButton.contains(event.target)
+    ) {
+        closeMenu();
+    }
+});
+
+// Закрытие меню при переходе на десктопный размер
+window.addEventListener("resize", () => {
+    if (window.innerWidth >= 768) {
+        closeMenu();
+    }
+});
+
 </script>
 
 </body>
